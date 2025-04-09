@@ -14,6 +14,7 @@ Example:
 
 import sys
 import hashlib
+import argparse
 
 def hash_email(email):
     """
@@ -25,11 +26,13 @@ def hash_email(email):
     Returns:
         str: The SHA-256 hash of the email in hexadecimal format
     """
-    # TODO: Implement this function
     # 1. Convert the email string to bytes
-    # 2. Create a SHA-256 hash of the email
+    byte_email = email.encode()
+    # 2. Create a SHA-256 hash object and update it with the email bytes
+    hash_256 = hashlib.sha256()
+    hash_256.update(byte_email)
     # 3. Return the hash in hexadecimal format
-    pass
+    return hash_256.hexdigest()
 
 def write_hash_to_file(hash_value, filename="hash.email"):
     """
@@ -41,20 +44,22 @@ def write_hash_to_file(hash_value, filename="hash.email"):
     """
     # TODO: Implement this function
     # 1. Open the file in write mode
+    with open(filename, 'w') as file:
+        file.write(hash_value)
     # 2. Write the hash value to the file
     # 3. Close the file
-    pass
 
 def main():
     """
     Main function to process command line arguments and execute the script.
     """
-    # TODO: Implement this function
-    # 1. Check if an email address was provided as a command line argument
-    # 2. If not, print an error message and exit with a non-zero status
-    # 3. If yes, hash the email address
-    # 4. Write the hash to a file named "hash.email"
-    pass
+    
+    parser = argparse.ArgumentParser(description="Hash an email and save the hash.")
+    parser.add_argument("email", help="The email address to hash")
+    args = parser.parse_args()
+    hashed_email = hash_email(args.email)
+    print(hashed_email)
+    write_hash_to_file(hashed_email)
 
 if __name__ == "__main__":
     main()
