@@ -1,3 +1,5 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/6fFVVHyL)
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=18980322)
 # GitHub and Python Foundations Assignment
 
 ## Overview
@@ -48,12 +50,12 @@ This assignment will help you practice:
 
 ### Part 1: Update this README.md
 Replace the "Part 1" section with:
-- A brief introduction about yourself (first name only)
-- What you're hoping to get out of this course
-- Topics you would like to see included
-- A musical recommendation and a link to something about it (song, album, artist)
+- My name is Aya! I am a masters student at UCSF studying Health Data Science
+- I hope to imrpove my python skills and I can't wait to see what I can accomplish for the final project
+- The topics I am interested in is anything in predictive modeling and using pythontorch
+- A song that I like is beach house specifically this song [YouTube](https://www.youtube.com/watch?v=RBtlPT23PTM&ab_channel=SubPop)
 
-### Part 2: Complete the email_hasher.py Script
+### Part 2: Complete the email_hasher.py Script 
 The email_hasher.py script should:
 1. Accept an email address as a command line argument
 2. Hash the email using the SHA-256 algorithm from the hashlib library
